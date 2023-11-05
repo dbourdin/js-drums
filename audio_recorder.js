@@ -91,8 +91,6 @@ function startRecording() {
 
   mediaRecorder.onstop = () => {
     const audioBlob = new Blob(chunks, { type: 'audio/wav' });
-    console.log(chunks)
-    console.log(audioBlob)
     recordingAudio.src = URL.createObjectURL(audioBlob);
     startRecordButton.disabled = false;
     stopRecordButton.disabled = true;
